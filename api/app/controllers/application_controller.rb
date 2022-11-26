@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::API
   SECRET_KEY = Rails.application.credentials.jwt_secret
 
-  def get_current_user
+  def require_current_user
     authorization_header = request.headers['Authorization']
     encoded_jwt_token = authorization_header.split(' ').last if authorization_header
 
