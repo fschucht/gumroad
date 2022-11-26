@@ -12,12 +12,12 @@ RSpec.describe ProductReview, type: :model do
     end
   end
 
-  context 'when the rating is smaller than 0' do
+  context 'when the rating is smaller than 1' do
     it 'should not save the product review' do
       product = Product.create title: 'Title'
       user = User.create email: 'valid@email.com', password: 'abcdef'
 
-      product_review = ProductReview.new rating: -1, comment: '0' * 100, user: user, product: product
+      product_review = ProductReview.new rating: 0, comment: '0' * 100, user: user, product: product
 
       expect(product_review.save).to be false
     end

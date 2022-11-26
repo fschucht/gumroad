@@ -20,7 +20,7 @@ class Api::V1::ProductsController < ApplicationController
     if @product.save
       render json: { data: @product }, status: 201
     else
-      render json: { errors: @product.errors.full_messages }, status: 400
+      render json: { errors: @product.errors.full_messages.uniq }, status: 400
     end
   end
 

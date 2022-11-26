@@ -5,7 +5,7 @@ class Api::V1::UsersController < ApplicationController
     if @user.save
       render json: { data: @user }, status: 201
     else
-      render json: { errors: @user.errors.full_messages }, status: 400
+      render json: { errors: @user.errors.full_messages.uniq }, status: 400
     end
   end
 
