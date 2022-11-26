@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Api::V1::Users', type: :request do
   describe 'POST /' do
-    context 'when all data has been provided' do
+    context 'when all params has been provided' do
       it 'should return a 201 status code' do
         post '/api/v1/users', params: { 'email' => 'valid@email.com', 'password': 'abcdef' }
 
