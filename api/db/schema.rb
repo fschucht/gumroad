@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_26_160117) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_26_175237) do
+  create_table "product_reviews", force: :cascade do |t|
+    t.integer "rating"
+    t.string "comment"
+    t.integer "user_id", null: false
+    t.integer "product_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index "\"user\", \"product\"", name: "index_product_reviews_on_user_and_product", unique: true
+    t.index ["product_id"], name: "index_product_reviews_on_product_id"
+    t.index ["user_id"], name: "index_product_reviews_on_user_id"
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
@@ -24,4 +36,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_26_160117) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "product_reviews", "products"
+  add_foreign_key "product_reviews", "users"
 end
