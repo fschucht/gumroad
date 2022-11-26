@@ -1,6 +1,4 @@
 class Api::V1::AuthController < ApplicationController
-  SECRET_KEY = Rails.application.credentials.jwt_secret
-
   def login
     @user = User.find_by_email params[:email]
 
