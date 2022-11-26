@@ -13,7 +13,7 @@ RSpec.describe 'Api::V1::Products', type: :request do
 
       get '/api/v1/products/'
 
-      expect(response.body).to eq({ 'data' => [product] }.to_json)
+      expect(response.body).to eq({ data: [product] }.to_json)
     end
   end
 
@@ -32,7 +32,7 @@ RSpec.describe 'Api::V1::Products', type: :request do
 
         get "/api/v1/products/#{product.id}"
 
-        expect(response.body).to eq({ 'data' => product }.to_json)
+        expect(response.body).to eq({ data: product }.to_json)
       end
     end
 
@@ -46,7 +46,7 @@ RSpec.describe 'Api::V1::Products', type: :request do
       it 'should return an error' do
         get '/api/v1/products/0'
 
-        expect(response.body).to eq({ 'errors' => ['Product not found'] }.to_json)
+        expect(response.body).to eq({ errors: ['Product not found'] }.to_json)
       end
     end
   end
@@ -54,14 +54,14 @@ RSpec.describe 'Api::V1::Products', type: :request do
   describe 'POST /' do
     context 'when all data has been provided' do
       it 'should return a 201 status code' do
-        post '/api/v1/products', params: { 'title' => 'Title' }
+        post '/api/v1/products', params: { title: 'Title' }
 
         expect(response).to have_http_status 201
       end
 
       it 'return the created product' do
         expect do
-          post '/api/v1/products', params: { 'title' => 'Title' }
+          post '/api/v1/products', params: { title: 'Title' }
         end.to change(Product, :count).by(1)
       end
     end
@@ -70,7 +70,7 @@ RSpec.describe 'Api::V1::Products', type: :request do
       it 'return an error' do
         post '/api/v1/products', params: {}
 
-        expect(response.body).to eq({ 'errors' => ["Title can't be blank"] }.to_json)
+        expect(response.body).to eq({ errors: ["Title can't be blank"] }.to_json)
       end
     end
   end

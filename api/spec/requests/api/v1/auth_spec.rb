@@ -35,7 +35,7 @@ RSpec.describe 'Api::V1::Auths', type: :request do
       it 'should return an error' do
         post '/api/v1/auth/login', params: { email: 'valid@email.com', password: 'abcdef' }
 
-        expect(response.body).to eq({ 'errors' => ['Unauthorized'] }.to_json)
+        expect(response.body).to eq({ errors: ['Unauthorized'] }.to_json)
       end
     end
 
@@ -53,7 +53,7 @@ RSpec.describe 'Api::V1::Auths', type: :request do
 
         post '/api/v1/auth/login', params: { password: 'abcdef' }
 
-        expect(response.body).to eq({ 'errors' => ['Unauthorized'] }.to_json)
+        expect(response.body).to eq({ errors: ['Unauthorized'] }.to_json)
       end
     end
 
@@ -71,7 +71,7 @@ RSpec.describe 'Api::V1::Auths', type: :request do
 
         post '/api/v1/auth/login', params: { email: 'valid@email.com', password: 'bcdefg' }
 
-        expect(response.body).to eq({ 'errors' => ['Unauthorized'] }.to_json)
+        expect(response.body).to eq({ errors: ['Unauthorized'] }.to_json)
       end
     end
 
@@ -89,7 +89,7 @@ RSpec.describe 'Api::V1::Auths', type: :request do
 
         post '/api/v1/auth/login', params: { email: 'valid@email.com' }
 
-        expect(response.body).to eq({ 'errors' => ['Unauthorized'] }.to_json)
+        expect(response.body).to eq({ errors: ['Unauthorized'] }.to_json)
       end
     end
   end

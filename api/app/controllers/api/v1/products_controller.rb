@@ -1,16 +1,16 @@
 class Api::V1::ProductsController < ApplicationController
   def index
     @products = Product.all
-    render json: { 'data' => @products }, status: 200
+    render json: { data: @products }, status: 200
   end
 
   def show
     @product = Product.find_by id: params[:id]
 
     if @product
-      render json: { 'data' => @product }, status: 200
+      render json: { data: @product }, status: 200
     else
-      render json: { 'errors' => ['Product not found'] }, status: 404
+      render json: { errors: ['Product not found'] }, status: 404
     end
   end
 
@@ -18,9 +18,9 @@ class Api::V1::ProductsController < ApplicationController
     @product = Product.new product_params
 
     if @product.save
-      render json: { 'data' => @product }, status: 201
+      render json: { data: @product }, status: 201
     else
-      render json: { 'errors' => @product.errors.full_messages }, status: 400
+      render json: { errors: @product.errors.full_messages }, status: 400
     end
   end
 
