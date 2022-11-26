@@ -3,6 +3,37 @@ require 'rails_helper'
 SECRET_KEY = Rails.application.credentials.jwt_secret
 
 RSpec.describe 'Api::V1::Products::ProductReviews', type: :request do
+  describe 'GET /products/:id/product_reviews' do
+    it 'should return a 200 status code' do
+      product = Product.create title: 'Title'
+
+      get "/api/v1/products/#{product.id}/product_reviews"
+
+      expect(response).to have_http_status 200
+    end
+
+    it 'should return all product reviews and the average rating' do
+      product = Product.create title: 'Title'
+
+      user1 = User.create email: 'valid1@email.com', password: 'abcdef'
+      product_review1 = ProductReview.create rating: 1, comment: '0' * 100, product: product, user: user1
+
+      user2 = User.create email: 'valid2@email.com', password: 'abcdef'
+      product_review2 = ProductReview.create rating: 5, comment: '0' * 100, product: product, user: user2
+
+      get "/api/v1/products/#{product.id}/product_reviews"
+
+      expect(response.body).to eq({
+        data: {
+          stats: {
+            average_rating: 3
+          },
+          reviews: [product_review2, product_review1]
+        }
+      }.to_json)
+    end
+  end
+
   describe 'POST /products/:id/product_reviews' do
     context 'when all data has been provided' do
       it 'should return a 201 status code' do
