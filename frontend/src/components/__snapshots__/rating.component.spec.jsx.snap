@@ -33,7 +33,8 @@ exports[`Rating when the averageRating is 0 should render 0 stars 1`] = `
     className="text"
   >
     0.0
-     (
+     
+    (
     100
      Ratings)
   </p>
@@ -73,7 +74,8 @@ exports[`Rating when the averageRating is 0.5 should render 1 stars 1`] = `
     className="text"
   >
     0.5
-     (
+     
+    (
     100
      Ratings)
   </p>
@@ -113,7 +115,8 @@ exports[`Rating when the averageRating is 0.25 should render 1 stars 1`] = `
     className="text"
   >
     0.3
-     (
+     
+    (
     100
      Ratings)
   </p>
@@ -153,7 +156,8 @@ exports[`Rating when the averageRating is 0.75 should render 1 stars 1`] = `
     className="text"
   >
     0.8
-     (
+     
+    (
     100
      Ratings)
   </p>
@@ -193,7 +197,8 @@ exports[`Rating when the averageRating is 1 should render 1 stars 1`] = `
     className="text"
   >
     1.0
-     (
+     
+    (
     100
      Ratings)
   </p>
@@ -233,7 +238,8 @@ exports[`Rating when the averageRating is 1.5 should render 2 stars 1`] = `
     className="text"
   >
     1.5
-     (
+     
+    (
     100
      Ratings)
   </p>
@@ -273,7 +279,8 @@ exports[`Rating when the averageRating is 1.25 should render 2 stars 1`] = `
     className="text"
   >
     1.3
-     (
+     
+    (
     100
      Ratings)
   </p>
@@ -313,7 +320,8 @@ exports[`Rating when the averageRating is 1.75 should render 2 stars 1`] = `
     className="text"
   >
     1.8
-     (
+     
+    (
     100
      Ratings)
   </p>
@@ -353,7 +361,8 @@ exports[`Rating when the averageRating is 2 should render 2 stars 1`] = `
     className="text"
   >
     2.0
-     (
+     
+    (
     100
      Ratings)
   </p>
@@ -393,7 +402,8 @@ exports[`Rating when the averageRating is 2.5 should render 3 stars 1`] = `
     className="text"
   >
     2.5
-     (
+     
+    (
     100
      Ratings)
   </p>
@@ -433,7 +443,8 @@ exports[`Rating when the averageRating is 2.25 should render 3 stars 1`] = `
     className="text"
   >
     2.3
-     (
+     
+    (
     100
      Ratings)
   </p>
@@ -473,7 +484,8 @@ exports[`Rating when the averageRating is 2.75 should render 3 stars 1`] = `
     className="text"
   >
     2.8
-     (
+     
+    (
     100
      Ratings)
   </p>
@@ -513,7 +525,8 @@ exports[`Rating when the averageRating is 3 should render 3 stars 1`] = `
     className="text"
   >
     3.0
-     (
+     
+    (
     100
      Ratings)
   </p>
@@ -553,7 +566,8 @@ exports[`Rating when the averageRating is 3.5 should render 4 stars 1`] = `
     className="text"
   >
     3.5
-     (
+     
+    (
     100
      Ratings)
   </p>
@@ -593,7 +607,8 @@ exports[`Rating when the averageRating is 3.25 should render 4 stars 1`] = `
     className="text"
   >
     3.3
-     (
+     
+    (
     100
      Ratings)
   </p>
@@ -633,7 +648,8 @@ exports[`Rating when the averageRating is 3.75 should render 4 stars 1`] = `
     className="text"
   >
     3.8
-     (
+     
+    (
     100
      Ratings)
   </p>
@@ -673,7 +689,8 @@ exports[`Rating when the averageRating is 4 should render 4 stars 1`] = `
     className="text"
   >
     4.0
-     (
+     
+    (
     100
      Ratings)
   </p>
@@ -713,7 +730,8 @@ exports[`Rating when the averageRating is 4.5 should render 5 stars 1`] = `
     className="text"
   >
     4.5
-     (
+     
+    (
     100
      Ratings)
   </p>
@@ -753,7 +771,8 @@ exports[`Rating when the averageRating is 4.25 should render 5 stars 1`] = `
     className="text"
   >
     4.3
-     (
+     
+    (
     100
      Ratings)
   </p>
@@ -793,7 +812,8 @@ exports[`Rating when the averageRating is 4.75 should render 5 stars 1`] = `
     className="text"
   >
     4.8
-     (
+     
+    (
     100
      Ratings)
   </p>
@@ -833,7 +853,8 @@ exports[`Rating when the averageRating is 5 should render 5 stars 1`] = `
     className="text"
   >
     5.0
-     (
+     
+    (
     100
      Ratings)
   </p>

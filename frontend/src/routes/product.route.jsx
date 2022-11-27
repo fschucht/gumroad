@@ -9,6 +9,7 @@ import { View } from "../components/view.component"
 import { useFetch } from "../hooks/useFetch.hook"
 import { API_TOKEN_KEY } from "../constants";
 import { Text } from "../components/text.component";
+import { Review } from "../components/review.component";
 
 const refetchProductReviewsTrigger = createTrigger();
 
@@ -71,9 +72,10 @@ export const ProductRoute = () => {
           averageRating={productReviewsData.data.stats.average_rating} ratingsCount={productReviewsData.data.reviews.length}
         />
       </View>
+      {productReviewsData.data.reviews.map(review => <Review review={review} />)}
       <ReviewForm
         productId={productData.data.id}
-        hasReviewed={productReviewsData.data.reviews.some(({ user_id }) => user_id === userData.data.id)}
+        hasReviewed={userData && productReviewsData.data.reviews.some(({ user_id }) => user_id === userData.data.id)}
         onRefetchProductReviews={refetchProductReviewsTrigger}
       />
     </Container>

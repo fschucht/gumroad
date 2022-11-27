@@ -3,7 +3,7 @@ import { ReactComponent as StarSvg } from '../icons/star.svg'
 import './rating.component.css'
 import { Text } from './text.component'
 
-export const Rating = ({ averageRating, ratingsCount }) => {
+export const Rating = ({ averageRating, ratingsCount, shouldRenderRating = true }) => {
   const roundedRating = Math.ceil(averageRating)
 
   return (
@@ -20,7 +20,14 @@ export const Rating = ({ averageRating, ratingsCount }) => {
           }
         />
       ))}
-      <Text>{averageRating.toFixed(1)} ({ratingsCount} Ratings)</Text>
+      {shouldRenderRating && (
+        <Text>
+          {averageRating.toFixed(1)}
+          {typeof ratingsCount === 'number' && (
+            <>{' '}({ratingsCount} Ratings)</>
+          )}
+        </Text>
+      )}
     </div>
   )
 }

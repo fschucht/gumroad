@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Review should render a Review component 1`] = `
+Array [
+  <div
+    className="view view--layout-row-space-between-center"
+  >
+    <p
+      className="text"
+    >
+      email
+    </p>
+    <div
+      className="rating"
+    >
+      <svg
+        className="rating__star rating__star--active"
+      >
+        star.svg
+      </svg>
+      <svg
+        className="rating__star rating__star--active"
+      >
+        star.svg
+      </svg>
+      <svg
+        className="rating__star rating__star--active"
+      >
+        star.svg
+      </svg>
+      <svg
+        className="rating__star rating__star--active"
+      >
+        star.svg
+      </svg>
+      <svg
+        className="rating__star rating__star--active rating__star--last"
+      >
+        star.svg
+      </svg>
+    </div>
+  </div>,
+  <div
+    className="view view--with-border-bottom"
+  >
+    <p
+      className="text"
+    >
+      Comment
+    </p>
+  </div>,
+]
+`;
