@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form should render a Form component 1`] = `
+<form
+  className="form"
+>
+  Hello World!
+</form>
+`;
