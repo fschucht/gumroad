@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea should render a TextArea component 1`] = `
+<textarea
+  className="textarea"
+  placeholder="Test"
+  value="Test"
+/>
+`;
