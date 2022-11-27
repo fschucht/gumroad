@@ -6,6 +6,7 @@ import { Headline } from "../components/headline.component"
 import { Input } from "../components/input.component"
 import { View } from "../components/view.component"
 import { toApiUrl } from "../hooks/useFetch.hook"
+import { API_TOKEN_KEY } from '../constants'
 
 export const RegisterRoute = () => {
   const [registrationInput, setRegistrationInput] = useState({
@@ -13,8 +14,6 @@ export const RegisterRoute = () => {
     password: '',
   })
   const [registrationError, setRegistrationError] = useState(null)
-
-  console.log(registrationError)
 
   const onRegister = async (event) => {
     event.preventDefault()
@@ -49,7 +48,7 @@ export const RegisterRoute = () => {
       return
     }
 
-    window.localStorage.setItem('api-token', loginBody.data.token)
+    window.localStorage.setItem(API_TOKEN_KEY, loginBody.data.token)
 
     document.location = '/'
   }
