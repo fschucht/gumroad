@@ -58,6 +58,10 @@ To use the demo application, follow these steps:
 5. Log into your user account
 6. Write your review
 
+You can see a live demo here:
+
+https://user-images.githubusercontent.com/7281549/204162423-49310cf9-ea84-4c2c-bcf0-0a4f79cdffbe.mp4
+
 ## Possible Technical Improvements
 
 The following technical improvements could be done in the future but have been omitted to limit the time worked on the project:
