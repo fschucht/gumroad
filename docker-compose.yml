@@ -1,0 +1,52 @@
+version: "3.8"
+
+services:
+  frontend:
+    container_name: frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - ./frontend:/app
+    networks:
+      - web-network
+    ports:
+      - 3000:3000
+    depends_on:
+      - api
+
+  api:
+    container_name: api
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    restart: always
+    env_file: ./api/.env
+    volumes:
+      - ./api:/app
+    networks:
+      - web-network
+    ports:
+      - 3001:3000
+    depends_on:
+      - db
+    links:
+      - db
+
+  db:
+    image: postgres:15.1-alpine
+    restart: always
+    env_file: ./.env
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./tmp/postgres_data:/var/lib/postgresql/data
+    networks:
+      - web-network
+
+networks:
+  web-network:
+    driver: bridge

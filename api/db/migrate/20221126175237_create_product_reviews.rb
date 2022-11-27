@@ -9,6 +9,6 @@ class CreateProductReviews < ActiveRecord::Migration[7.0]
       t.timestamps
     end
 
-    add_index :product_reviews, %i[user product], unique: true
+    add_index :product_reviews, %i[user_id product_id], unique: true
   end
 end
