@@ -12,6 +12,7 @@ class Api::V1::ProductReviewsController < ApplicationController
                reviews: @product_reviews
              }
            },
+           include: ['user'],
            status: 200
   end
 
