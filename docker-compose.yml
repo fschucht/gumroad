@@ -30,7 +30,8 @@ services:
     ports:
       - 3001:3000
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     links:
       - db
 
@@ -46,6 +47,11 @@ services:
       - ./tmp/postgres_data:/var/lib/postgresql/data
     networks:
       - web-network
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 5s
+      timeout: 5s
+      retries: 25
 
 networks:
   web-network:
