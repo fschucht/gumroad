@@ -42,6 +42,11 @@ export const ProductRoute = () => {
     depends: [refetchProductReviewsTriggerValue]
   })
 
+  const onLogout = () => {
+    window.localStorage.removeItem(API_TOKEN_KEY)
+    document.location.reload()
+  }
+
   if (productError || productReviewsError) {
     return <Container>
       <View>
@@ -63,8 +68,14 @@ export const ProductRoute = () => {
       <View layout='row-space-between-center' hasBorderBottom>
         <Headline size='large'>{productData.data.title}</Headline>
         <View>
-          <Button type='primary' url='/register'>Register</Button>
-          <Button type='secondary' url='/login'>Login</Button>
+          {userData ? (
+            <Button type='secondary' onClick={onLogout}>Logout</Button>
+          ) : (
+            <>
+              <Button type='primary' url='/register'>Register</Button>
+              <Button type='secondary' url='/login'>Login</Button>
+            </>
+          )}
         </View>
       </View>
       <View hasBorderBottom>
