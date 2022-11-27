@@ -33,10 +33,19 @@ To run the application, please follow these steps:
 
 ## Running Tests
 
+### API
+
 To run tests, please follow these steps:
 
 1. Run `docker ps` and find the container id of `gumroad-api`
 2. Run `docker exec CONTAINER_ID bundle exec rspec`, where `CONTAINER_ID` is the id from the first step
+
+### Frontend
+
+To run tests, please follow these steps:
+
+1. Run `cd frontend` to move into the `frontend` directory
+2. Run `npm run test`
 
 ## Usage
 
