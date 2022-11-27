@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RatingInput should render a RatingInput component 1`] = `
+<div
+  className="rating-input"
+>
+  <p
+    className="text"
+  >
+    Your Rating
+  </p>
+  <div
+    className="rating-input__stars"
+  >
+    <svg
+      className="rating-input__star"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      star.svg
+    </svg>
+    <svg
+      className="rating-input__star"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      star.svg
+    </svg>
+    <svg
+      className="rating-input__star"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      star.svg
+    </svg>
+    <svg
+      className="rating-input__star"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      star.svg
+    </svg>
+    <svg
+      className="rating-input__star"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      star.svg
+    </svg>
+  </div>
+</div>
+`;

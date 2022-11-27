@@ -1,0 +1,32 @@
+.rating-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+}
+
+.rating-input__stars {
+  display: flex;
+  flex-direction: row;
+  flex-direction: flex-end;
+}
+
+.rating-input__star {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.25rem;
+  cursor: pointer;
+}
+
+.rating-input__star > path {
+  fill: #fff;
+  stroke: #000;
+  stroke-width: 0.1rem;
+}
+
+.rating-input__star:hover > path,
+.rating-input__star--active > path {
+  fill: #000;
+  stroke: #000;
+  stroke-width: 0.1rem;
+}

@@ -10,6 +10,7 @@ export const Rating = ({ averageRating, ratingsCount }) => {
     <div className="rating">
       {new Array(5).fill(undefined).map((_value, index) => (
         <StarSvg
+          key={index}
           className={
             mergeClassNames({
               'rating__star': true,

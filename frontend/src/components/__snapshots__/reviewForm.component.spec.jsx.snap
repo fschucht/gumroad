@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReviewForm when the user has already reviewed should return null 1`] = `null`;
+
+exports[`ReviewForm when the user has not reviewed should return null 1`] = `
+<div
+  className="view"
+>
+  <form
+    className="form"
+  >
+    <div
+      className="rating-input"
+    >
+      <p
+        className="text"
+      >
+        Your Rating
+      </p>
+      <div
+        className="rating-input__stars"
+      >
+        <svg
+          className="rating-input__star"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          star.svg
+        </svg>
+        <svg
+          className="rating-input__star"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          star.svg
+        </svg>
+        <svg
+          className="rating-input__star"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          star.svg
+        </svg>
+        <svg
+          className="rating-input__star"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          star.svg
+        </svg>
+        <svg
+          className="rating-input__star"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          star.svg
+        </svg>
+      </div>
+    </div>
+    <textarea
+      className="textarea"
+      onChange={[Function]}
+      placeholder="Your Comment"
+      value=""
+    />
+  </form>
+  <button
+    className="button button--primary"
+    disabled={true}
+    onClick={[Function]}
+  >
+    Submit Review
+  </button>
+</div>
+`;
+
+exports[`ReviewForm when there is no api token in the localstorage should render a login message 1`] = `
+<div
+  className="view"
+>
+  <p
+    className="text"
+  >
+    Login in to review this product.
+  </p>
+</div>
+`;
