@@ -53,8 +53,9 @@ export const ReviewForm = ({ productId, hasReviewed, onRefetchProductReviews }) 
 
   if (!apiToken) {
     return (
-      <View>
+      <View layout='row-space-between-center'>
         <Text>Login in to review this product.</Text>
+        <Button type='secondary' url='/login'>Login</Button>
       </View >
     )
   }
