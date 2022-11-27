@@ -8,6 +8,16 @@ describe('View', () => {
     expect(renderedComponent).toMatchSnapshot()
   })
 
+  describe('when layout is passed', () => {
+    describe('when layout is row-space-between-center', () => {
+      it('should render a View component', () => {
+        const renderedComponent = renderer.create(<View layout='row-space-between-center'>Hello World!</View>).toJSON()
+
+        expect(renderedComponent).toMatchSnapshot()
+      })
+    })
+  })
+
   describe('when hasBorderTop is true', () => {
     it('should render a View component with a top border', () => {
       const renderedComponent = renderer.create(<View hasBorderTop>Hello World!</View>).toJSON()

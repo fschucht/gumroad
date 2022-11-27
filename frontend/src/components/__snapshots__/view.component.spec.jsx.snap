@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[` 1`] = `
+<div
+  className="view view--layout-row-space-between-center"
+>
+  Hello World!
+</div>
+`;
+
 exports[`View should render a View component 1`] = `
 <div
   className="view"
@@ -35,6 +43,14 @@ exports[`View when hasBorderRight is true should render a View component with a 
 exports[`View when hasBorderTop is true should render a View component with a top border 1`] = `
 <div
   className="view view--with-border-top"
+>
+  Hello World!
+</div>
+`;
+
+exports[`View when layout is passed when layout is row-space-between-center should render a View component 1`] = `
+<div
+  className="view view--layout-row-space-between-center"
 >
   Hello World!
 </div>

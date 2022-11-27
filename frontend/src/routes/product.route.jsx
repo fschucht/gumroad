@@ -1,3 +1,4 @@
+import { Button } from "../components/button.component"
 import { Container } from "../components/container.component"
 import { Headline } from "../components/headline.component"
 import { View } from "../components/view.component"
@@ -15,8 +16,12 @@ export const ProductRoute = () => {
   }
 
   return <Container>
-    <View hasBorderBottom>
+    <View layout='row-space-between-center' hasBorderBottom>
       <Headline size='large'>{data.data.title}</Headline>
+      <View>
+        <Button type='primary' url='/register'>Register</Button>
+        <Button type='secondary' url='/login'>Login</Button>
+      </View>
     </View>
   </Container>
 }

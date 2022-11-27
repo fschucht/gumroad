@@ -1,6 +1,12 @@
 .view {
   padding: 1rem 1.5rem;
-  border-bottom: 0.1rem solid #000;
+}
+
+.view--layout-row-space-between-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .view--with-border-top {

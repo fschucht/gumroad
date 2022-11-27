@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render a Button component 1`] = `
+<a
+  className="button"
+>
+  Hello World!
+</a>
+`;
+
+exports[`Button when type is primary should render a primary Button component 1`] = `
+<a
+  className="button button--primary"
+>
+  Hello World!
+</a>
+`;
+
+exports[`Button when type is secondary should render a secondary Button component 1`] = `
+<a
+  className="button button--secondary"
+>
+  Hello World!
+</a>
+`;
