@@ -1,0 +1,8 @@
+.view {
+  padding: 1rem 1.5rem;
+  border-bottom: 0.1rem solid #000;
+}
+
+.view+.view {
+  border-left: 0.1rem solid #000;
+}

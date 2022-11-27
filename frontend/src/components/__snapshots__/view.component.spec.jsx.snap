@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`View should render a View component 1`] = `
+<div
+  className="view"
+>
+  Hello World!
+</div>
+`;
