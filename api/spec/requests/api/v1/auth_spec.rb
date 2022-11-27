@@ -19,7 +19,7 @@ RSpec.describe 'Api::V1::Auths', type: :request do
         post '/api/v1/auth/login', params: { email: 'valid@email.com', password: 'abcdef' }
 
         parsed_body = JSON.parse(response.body)
-        decoded_token = JWT.decode(parsed_body['token'], SECRET_KEY)[0]
+        decoded_token = JWT.decode(parsed_body['data']['token'], SECRET_KEY)[0]
 
         expect(decoded_token['user_id']).to eq(user.id)
       end
