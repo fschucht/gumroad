@@ -2,8 +2,6 @@
 
 This repository holds a demo application that allows the user to write reviews for a product.
 
-It took roughly 10 hours to finish the demo application.
-
 ## Process
 
 Gumroad makes money if creators sell their products on the platform. Therefore, making sure that creators succeed in selling their products with a good experience for their customers is the highest priority.
@@ -23,6 +21,8 @@ Once I compiled this initial list of problems, I picked a problem based on two c
 - Can the problem be solved in a demo application in ~8 hours?
 
 Based on these criteria, I built a demo for written product reviews. I noticed that Gumroad creators already embed positive reviews into their product descriptions. Having these reviews in a central place could benefit the creators, as it doesn't require manual curation by creators.
+
+It took roughly 10 hours to finish the demo application.
 
 ## Getting Started
 
