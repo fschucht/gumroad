@@ -1,0 +1,26 @@
+.rating {
+  display: flex;
+  flex-direction: row;
+}
+
+.rating__star {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.25rem;
+}
+
+.rating__star--last {
+  margin-right: 0.75rem;
+}
+
+.rating__star > path {
+  fill: #fff;
+  stroke: #000;
+  stroke-width: 0.1rem;
+}
+
+.rating__star--active > path {
+  fill: #000;
+  stroke: #000;
+  stroke-width: 0.1rem;
+}
