@@ -1,4 +1,5 @@
 import { Container } from "../components/container.component"
+import { Headline } from "../components/headline.component"
 import { View } from "../components/view.component"
 import { useFetch } from "../hooks/useFetch.hook"
 
@@ -14,6 +15,8 @@ export const ProductRoute = () => {
   }
 
   return <Container>
-    <View hasBorderBottom>{data.data.title}</View>
+    <View hasBorderBottom>
+      <Headline size='large'>{data.data.title}</Headline>
+    </View>
   </Container>
 }

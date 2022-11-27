@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Headline when size is large should render a Headline component 1`] = `
+<h1
+  className="headline--large"
+>
+  Hello World!
+</h1>
+`;
+
+exports[`Headline when size is missing should return null 1`] = `null`;
