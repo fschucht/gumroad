@@ -29,6 +29,13 @@ To run the application, please follow these steps:
 1. Install docker: https://docs.docker.com/get-docker/
 2. Start the dockerized applications: `docker-compose up`
 
+## Running Tests
+
+To run tests, please follow these steps:
+
+1. Run `docker ps` and find the container id of `gumroad-api`
+2. Run `docker exec CONTAINER_ID bundle exec rspec`, where `CONTAINER_ID` is the id from the first step
+
 ## Usage
 
 To use the demo application, follow these steps:
