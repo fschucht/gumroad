@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should render a Input component 1`] = `
+<input
+  className="input"
+  placeholder="Test"
+  type="text"
+  value="Test"
+/>
+`;
