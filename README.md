@@ -2,6 +2,8 @@
 
 This repository holds a demo application that allows the user to write reviews for a product.
 
+It took roughly 10 hours to finish the demo application.
+
 ## Process
 
 Gumroad makes money if creators sell their products on the platform. Therefore, making sure that creators succeed in selling their products with a good experience for their customers is the highest priority.
@@ -46,3 +48,9 @@ To use the demo application, follow these steps:
 4. Click on "Login"
 5. Log into your user account
 6. Write your review
+
+## Possible Technical Improvements
+
+The following technical improvements could be done in the future but have been omitted to limit the time worked on the project:
+
+- Test routes and interactive components with jest and enzyme.
