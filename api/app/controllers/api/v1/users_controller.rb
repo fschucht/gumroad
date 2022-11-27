@@ -1,4 +1,10 @@
 class Api::V1::UsersController < ApplicationController
+  before_action :require_current_user, only: %i[current_user]
+
+  def current_user
+    render json: { data: @current_user }, status: 200
+  end
+
   def create
     @user = User.new user_params
 

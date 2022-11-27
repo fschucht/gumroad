@@ -1,6 +1,46 @@
 require 'rails_helper'
 
+SECRET_KEY = Rails.application.credentials.jwt_secret
+
 RSpec.describe 'Api::V1::Users', type: :request do
+  describe 'GET /current_user' do
+    context 'when the user is authenticated' do
+      it 'should return a 200 status code' do
+        user = User.create email: 'valid@email.com', password: 'abcdef'
+
+        jwt_token = JWT.encode({ user_id: user.id, exp: 10.minutes.from_now.to_i }, SECRET_KEY)
+
+        get '/api/v1/users/current_user', headers: { 'Authorization' => "Bearer #{jwt_token}" }
+
+        expect(response).to have_http_status 200
+      end
+
+      it 'should return the user' do
+        user = User.create email: 'valid@email.com', password: 'abcdef'
+
+        jwt_token = JWT.encode({ user_id: user.id, exp: 10.minutes.from_now.to_i }, SECRET_KEY)
+
+        get '/api/v1/users/current_user', headers: { 'Authorization' => "Bearer #{jwt_token}" }
+
+        expect(response.body).to eq({ data: user }.to_json)
+      end
+    end
+
+    context 'when the user is not authenticated' do
+      it 'should return a 401 status code' do
+        get '/api/v1/users/current_user'
+
+        expect(response).to have_http_status 401
+      end
+
+      it 'should return an error' do
+        get '/api/v1/users/current_user'
+
+        expect(response.body).to eq({ errors: ['Unauthorized'] }.to_json)
+      end
+    end
+  end
+
   describe 'POST /' do
     context 'when all params has been provided' do
       it 'should return a 201 status code' do
