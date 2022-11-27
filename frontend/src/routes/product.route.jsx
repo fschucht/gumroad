@@ -14,6 +14,6 @@ export const ProductRoute = () => {
   }
 
   return <Container>
-    <View>{data.data.title}</View>
+    <View hasBorderBottom>{data.data.title}</View>
   </Container>
 }

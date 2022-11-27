@@ -3,6 +3,18 @@
   border-bottom: 0.1rem solid #000;
 }
 
-.view+.view {
+.view--with-border-top {
+  border-top: 0.1rem solid #000;
+}
+
+.view--with-border-left {
   border-left: 0.1rem solid #000;
+}
+
+.view--with-border-right {
+  border-right: 0.1rem solid #000;
+}
+
+.view--with-border-bottom {
+  border-bottom: 0.1rem solid #000;
 }

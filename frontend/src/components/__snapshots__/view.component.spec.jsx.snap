@@ -7,3 +7,35 @@ exports[`View should render a View component 1`] = `
   Hello World!
 </div>
 `;
+
+exports[`View when hasBorderBottom is true should render a View component with a bottom border 1`] = `
+<div
+  className="view view--with-border-bottom"
+>
+  Hello World!
+</div>
+`;
+
+exports[`View when hasBorderLeft is true should render a View component with a left border 1`] = `
+<div
+  className="view view--with-border-left"
+>
+  Hello World!
+</div>
+`;
+
+exports[`View when hasBorderRight is true should render a View component with a right border 1`] = `
+<div
+  className="view view--with-border-right"
+>
+  Hello World!
+</div>
+`;
+
+exports[`View when hasBorderTop is true should render a View component with a top border 1`] = `
+<div
+  className="view view--with-border-top"
+>
+  Hello World!
+</div>
+`;
