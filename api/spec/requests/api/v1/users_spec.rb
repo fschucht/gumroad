@@ -14,6 +14,14 @@ RSpec.describe 'Api::V1::Users', type: :request do
           post '/api/v1/users', params: { email: 'valid@email.com', password: 'abcdef' }
         end.to change(User, :count).by(1)
       end
+
+      it 'should not return the password' do
+        post '/api/v1/users', params: { email: 'valid@email.com', password: 'abcdef' }
+
+        parsed_body = JSON.parse(response.body)
+
+        expect(parsed_body['password_digest']).to eq(nil)
+      end
     end
 
     context 'when the email is missing' do
