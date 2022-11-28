@@ -9,6 +9,7 @@ services:
     restart: always
     volumes:
       - ./frontend:/app
+      - /app/node_modules
     networks:
       - web-network
     ports:
