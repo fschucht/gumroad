@@ -17,7 +17,7 @@ After I finished the research, I found the following potential problems:
 
 Once I compiled this initial list of problems, I picked a problem based on two criteria:
 
-- How significant is the impact for creators.
+- How significant is the impact for creators?
 - Can the problem be solved in a demo application in ~8 hours?
 
 Based on these criteria, I built a demo for written product reviews. I noticed that many Gumroad creators already embed positive reviews into their product descriptions. Having these reviews in a central place could benefit the creators, as it doesn't require manual curation by creators and reduces their manual work.
