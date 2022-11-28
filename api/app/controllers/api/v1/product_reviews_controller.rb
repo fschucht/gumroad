@@ -3,12 +3,12 @@ class Api::V1::ProductReviewsController < ApplicationController
   before_action :require_product
 
   def index
-    @product_reviews = ProductReview.where(product: @product.id).order('created_at DESC')
-    @average_rating = ProductReview.where(product: @product.id).average(:rating)
+    @product_reviews = ProductReview.latest(@product.id)
+    @average_rating = ProductReview.average_rating(@product.id)
 
     render json: {
              data: {
-               stats: { average_rating: @average_rating.to_i },
+               stats: { average_rating: @average_rating },
                reviews: @product_reviews
              }
            },
