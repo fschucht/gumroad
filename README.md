@@ -33,6 +33,8 @@ To run the application, please follow these steps:
 3. Create `./api/.env` based on the `./api/.env.example` file. Make sure that the database values match the values set up in step 2.
 2. Start the dockerized applications: `docker-compose up`.
 
+**NOTE:** As this is a demo app, I committed the master.key to the repository for easier sharing. However, this is not a best practice and shouldn't be done in an actual production application.
+
 ## Running Tests
 
 ### API
