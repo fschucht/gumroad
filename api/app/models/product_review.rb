@@ -11,6 +11,6 @@ class ProductReview < ApplicationRecord
   end
 
   def self.average_rating(product_id)
-    ProductReview.where(product: product_id).average(:rating).to_i
+    ProductReview.where(product: product_id).average(:rating).to_f
   end
 end
